@@ -7,17 +7,19 @@
 //
 
 import Foundation
-
+//Declaring a dictionary for storing messages
 let message = [
     "start":"Write number: ",
+    "select":"Computer selected random number. How this number?",
     "more":"Number is greater than guessed number!",
     "less":"Number is less than guessed number!",
     "win":"Wow! You guessed an unknown number!",
     "try":"Try Again? Write 'y' for new game or any key for quit from game.",
 ]
+//Declaring a boolean variable, that will flag for starting new round or closing the game
 var playRound: Bool = true
 repeat {
-    print("Computer select random number. How this number?")
+    print(message["select"]!)
     let randomNumber = String(arc4random_uniform(10))
     var number : String = ""
     repeat {
